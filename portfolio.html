@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Raj Sharma — AI Ad Creatives</title>
+<meta name="description" content="AI-powered short-form video ads for businesses.">
+<meta property="og:title" content="Raj Sharma | AI Ad Creatives Portfolio">
+<meta property="og:description" content="AI-powered short-form video ads for businesses.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0b0c; --bg2:#111113; --ink:#f3f1ea; --muted:#a8a6a1;
+  --gold:#d9a94f; --gold2:#f0c97a; --line:rgba(217,169,79,.25);
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:inherit;margin:0;padding:0}
+html{scroll-behavior:smooth; scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.5;overflow-x:hidden}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;transition-duration:.001ms!important}}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+a{color:inherit;text-decoration:none}
+
+/* nav */
+header{position:sticky;top:0;z-index:50;background:rgba(11,11,12,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+nav.wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:700;letter-spacing:.04em;color:var(--gold2)}
+.navlinks{display:flex;gap:28px;font-size:14.5px;color:var(--muted)}
+.navlinks a:hover{color:var(--ink)}
+.navtoggle{display:none;background:none;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:6px 10px;font-size:20px}
+@media (max-width:720px){
+  .navlinks{position:fixed;top:64px;left:0;right:0;background:var(--bg2);flex-direction:column;padding:18px 24px;gap:16px;border-bottom:1px solid var(--line);transform:translateY(-8px);opacity:0;pointer-events:none;transition:.25s}
+  .navlinks.open{transform:translateY(0);opacity:1;pointer-events:auto}
+  .navtoggle{display:block}
+}
+
+/* hero */
+.hero{padding:14px 0 40px;display:grid;grid-template-columns:1fr 260px;gap:48px;align-items:center}
+@media (max-width:760px){.hero{grid-template-columns:1fr;text-align:center;padding-top:10px}}
+.eyebrow{color:var(--muted);font-size:14px;margin-bottom:10px}
+h1.hero-h{font-size:clamp(32px,5vw,52px);font-weight:700;line-height:1.1;color:var(--ink)}
+.hero-h .clap{display:inline-block;animation:float 3.2s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-4px) rotate(-6deg)}}
+.hero p.lead{margin-top:16px;max-width:52ch;color:var(--muted);font-size:16.5px}
+@media (max-width:760px){.hero p.lead{margin-inline:auto}}
+.cta-row{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+@media (max-width:760px){.cta-row{justify-content:center}}
+.btn{padding:13px 24px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:1px solid transparent;transition:transform .15s,opacity .15s;display:inline-flex;align-items:center;gap:8px}
+.btn svg{width:18px;height:18px;flex-shrink:0}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:linear-gradient(135deg,#f3ede0,#e4d8bf);color:#171410;border:1px solid var(--gold)}
+.btn-ghost{background:rgba(217,169,79,.08);border-color:rgba(217,169,79,.55);color:var(--ink)}
+.btn-ghost:hover,.btn-ghost:active{background:rgba(217,169,79,.18);border-color:var(--gold)}
+.btn-ghost:active{transform:translateY(0) scale(.97)}
+.rotating-border{position:relative;z-index:0;overflow:hidden}
+.rotating-border::before{content:"";position:absolute;top:50%;left:50%;width:220%;height:220%;transform:translate(-50%,-50%) rotate(0deg);background:conic-gradient(from 0deg,transparent 0deg,var(--gold2) 25deg,transparent 70deg,transparent 180deg,var(--gold2) 205deg,transparent 250deg,transparent 360deg);animation:borderspin 5s linear infinite;z-index:-2}
+.rotating-border::after{content:"";position:absolute;inset:2px;background:#0d0d0f;border-radius:inherit;z-index:-1}
+@keyframes borderspin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+
+.photo-card{border-radius:30px;padding:2px;background:transparent;border:1px solid rgba(217,169,79,.5);justify-self:center;position:relative;overflow:hidden}
+.photo-card::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.22) 48%,transparent 60%);transform:translateX(-130%);animation:sheen 6s ease-in-out infinite;pointer-events:none}
+@keyframes sheen{0%,80%,100%{transform:translateX(-130%)}90%{transform:translateX(130%)}}
+@keyframes sheen{0%,85%,100%{transform:translateX(-120%)}92%{transform:translateX(120%)}}
+.photo-card img{display:block;width:250px;height:290px;object-fit:contain;background:#111;border-radius:28px}
+.id-block{text-align:center;margin-top:14px}
+.id-block .name{color:var(--ink);font-weight:700;font-size:21px;letter-spacing:.01em}
+.id-block .name.signature{font-family:'Great Vibes',cursive;font-weight:400;font-size:32px;line-height:1.3;color:var(--ink)}
+.id-block .role{color:#8f8b84;font-size:14.5px;margin-top:4px}
+.id-block .loc{color:var(--muted);font-size:13.5px;margin-top:4px}
+
+section{border-top:1px solid var(--line)}
+section.wrap{padding-top:88px;padding-bottom:64px}
+@media (max-width:760px){section.wrap{padding-top:60px;padding-bottom:44px}}
+.sec-title{font-size:clamp(24px,3.4vw,32px);font-weight:700;display:flex;align-items:center;gap:12px}
+.sec-title svg{width:28px;height:28px;flex-shrink:0;stroke:var(--gold2)}
+.sec-sub{color:var(--gold2);font-size:15px;margin-top:6px}
+.sec-text{color:var(--muted);max-width:60ch;margin-top:10px;font-size:15px}
+
+.reveal{opacity:1}
+
+/* work grid */
+.work-grid{margin-top:32px;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px}
+.work-card{position:relative;aspect-ratio:9/16;border-radius:12px;border:1px solid var(--line);background:linear-gradient(160deg,#16161a,#0c0c0e);overflow:hidden;transition:transform .2s,border-color .2s}
+.work-card:hover{transform:translateY(-4px);border-color:var(--gold)}
+.work-card.empty{padding:14px;display:flex;flex-direction:column;justify-content:space-between}
+.work-card-media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000}
+.work-card-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.6) 0%,rgba(0,0,0,0) 32%,rgba(0,0,0,0) 54%,rgba(0,0,0,.85) 100%);display:flex;flex-direction:column;justify-content:space-between;padding:14px 14px 42px;pointer-events:none}
+.work-card .tag{font-size:10.5px;color:var(--gold2);border:1px solid var(--line);border-radius:20px;padding:3px 8px;width:fit-content;background:rgba(11,11,12,.45);backdrop-filter:blur(2px)}
+.work-card .wname{font-weight:700;font-size:15px}
+.work-card .windustry{color:var(--muted);font-size:12px;margin-top:2px}
+.work-card .spec{color:var(--muted);font-size:10px;margin-top:6px}
+.work-card .text-panel{background:rgba(6,6,7,.72);backdrop-filter:blur(4px);border-radius:10px;padding:9px 11px;margin:0 -2px}
+.top-group{display:flex;flex-direction:column;gap:6px}
+.work-card .idx{font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:13px;color:var(--gold2);letter-spacing:.02em}
+
+/* industries */
+.pills{margin-top:28px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media (min-width:640px){.pills{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:900px){.pills{grid-template-columns:repeat(4,1fr)}}
+.pill{border:1px dashed var(--gold2);color:var(--muted);border-radius:24px;padding:8px 16px;font-size:14px;display:inline-flex;align-items:center;width:fit-content}
+.pill .idx{font-family:Georgia,'Times New Roman',serif;font-weight:700;color:var(--gold2);margin-right:6px}
+.pill-open{color:var(--gold2);font-weight:600}
+.pill-open .idx{font-size:16px;line-height:1}
+.industries-note{margin-top:16px;color:var(--muted);font-size:13.5px}
+
+/* what i create */
+.create-list{margin-top:28px;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.create-item{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14.5px;background:var(--bg2);transition:border-color .2s,transform .2s}
+.create-item:hover{border-color:var(--gold);transform:translateY(-2px)}
+.create-item svg{width:20px;height:20px;flex-shrink:0;stroke:var(--gold2)}
+.offer-list{margin-top:28px;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.offer-item{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14.5px;background:var(--bg2);transition:border-color .2s,transform .2s}
+.offer-item:hover{border-color:var(--gold);transform:translateY(-2px)}
+.offer-item svg{width:20px;height:20px;flex-shrink:0;stroke:var(--gold2)}
+
+/* package */
+.pkg-grid{margin-top:28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;align-items:start}
+.pkg-card{border:1px solid var(--line);border-radius:16px;padding:26px;background:var(--bg2)}
+.pkg-card.featured{border:1.5px solid var(--gold);background:linear-gradient(180deg,rgba(217,169,79,.08),var(--bg2) 40%);position:relative;transform:translateY(-4px)}
+.pkg-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--gold2);color:#0b0b0c;font-size:12px;font-weight:700;padding:4px 14px;border-radius:999px;white-space:nowrap}
+.pkg-tier{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700;display:flex;align-items:center;gap:8px}
+.pkg-tier svg{width:16px;height:16px;flex-shrink:0}
+.pkg-price{color:var(--gold2);font-size:clamp(24px,3.6vw,30px);font-weight:700;margin-top:6px}
+.pkg-ads{color:var(--ink);font-weight:600;margin-top:4px;font-size:15px}
+.pkg-sub{color:var(--muted);margin-top:14px;font-size:13.5px;line-height:1.6}
+.pkg-sub div{margin-top:4px}
+.pkg-note{margin-top:22px;border:1px solid var(--gold);background:rgba(217,169,79,.08);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--gold2);text-align:center;position:relative}
+.contact-hook{font-size:clamp(24px,3.4vw,32px);font-weight:700;color:var(--ink);display:flex;align-items:center;justify-content:center;gap:12px}
+.contact-hook svg{width:26px;height:26px;flex-shrink:0}
+.contact-subhook{margin-top:10px;margin-bottom:36px;color:var(--muted);font-size:15.5px}
+.avail-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--bg2);border-radius:999px;padding:7px 16px;font-size:13.5px;color:var(--ink);margin-bottom:32px}
+.avail-dot{width:8px;height:8px;border-radius:50%;background:#2ecc71;box-shadow:0 0 0 0 rgba(46,204,113,.6);animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(46,204,113,.55)}70%{box-shadow:0 0 0 8px rgba(46,204,113,0)}100%{box-shadow:0 0 0 0 rgba(46,204,113,0)}}
+@media (max-width:760px){.avail-badge{margin-inline:auto}}
+
+/* about */
+.about-text{margin-top:20px;max-width:65ch;color:var(--muted);font-size:16px}
+.whyme-title{margin-top:36px;padding-top:56px;border-top:1px solid var(--line);font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:10px}
+.whyme-title svg{width:20px;height:20px;stroke:var(--gold2)}
+.whyme{margin-top:14px;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.whyme-item{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14.5px;color:var(--ink);background:var(--bg2);transition:border-color .2s,transform .2s}
+.whyme-item:hover{border-color:var(--gold);transform:translateY(-2px)}
+.whyme-item svg{width:20px;height:20px;flex-shrink:0;stroke:var(--gold2)}
+
+/* contact */
+.contact-row{margin-top:28px;display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:460px;margin-left:auto;margin-right:auto}
+@media (max-width:520px){.contact-row{grid-template-columns:1fr;max-width:280px}}
+#contact{text-align:center}
+#contact .sec-title{justify-content:center}
+#contact .contact-row{justify-content:center}
+#contact .sec-title .spacer{width:28px;height:28px;flex-shrink:0}
+.contact-card{display:grid;grid-template-columns:34px 1fr 34px;align-items:center;column-gap:12px;border:1px solid var(--line);border-radius:12px;padding:16px 22px;font-weight:600;transition:border-color .2s,transform .2s}
+.contact-card .label{text-align:center}
+.contact-card .spacer{width:34px;height:1px}
+.contact-card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.contact-card svg{width:22px;height:22px;flex-shrink:0}
+.icon-badge{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:var(--bg2);border:1px solid var(--line)}
+.icon-badge svg{width:18px;height:18px}
+
+footer{border-top:1px solid var(--line);padding:32px 0 72px;text-align:center;color:var(--muted);font-size:13.5px}
+.back-to-top{position:fixed;bottom:24px;right:24px;width:38px;height:38px;border-radius:50%;background:var(--bg2);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .25s,transform .2s;z-index:50}
+.back-to-top.show{opacity:1;pointer-events:auto}
+.back-to-top:hover{transform:translateY(-3px);border-color:var(--gold2)}
+.back-to-top svg{width:16px;height:16px;stroke:var(--gold2)}
+footer .gold{color:var(--gold2)}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="#" class="brand">Raj Sharma</a>
+    <div class="navlinks" id="navlinks">
+      <a href="#service">Service</a>
+      <a href="#work">Work</a>
+      <a href="#industries">Industries</a>
+      <a href="#process">Process</a>
+      <a href="#package">Package</a>
+      <a href="#about">About</a>
+      <a href="#whyme">Why Me</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="navtoggle" id="navtoggle" aria-label="Toggle menu">☰</button>
+  </nav>
+</header>
+
+<div class="wrap hero">
+  <div>
+    <div class="avail-badge"><span class="avail-dot"></span>Available for Client Work</div>
+    <h1 class="hero-h">AI Ad Creatives for Businesses <span class="clap">🎬</span></h1>
+    <p class="lead">I create AI-powered short-form video ad creatives for social media, paid ads &amp; brand promotion.</p>
+    <div class="cta-row">
+      <a href="#work" class="btn btn-ghost rotating-border"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>View My Work</a>
+      <a href="#contact" class="btn btn-ghost rotating-border"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 13l1.5-1.5a2 2 0 0 1 2.83 0l.34.34a1 1 0 0 0 1.42 0l1.6-1.6a1.5 1.5 0 0 0 0-2.12L15.5 5A3 3 0 0 0 11 5L5 11a2 2 0 0 0 0 2.83L9.17 18a2 2 0 0 0 2.83 0l.5-.5"/><path d="M8 15l2 2"/><path d="M2 12l4-4 2 2"/><path d="M22 10l-4 4-2-2"/></svg>Get in Touch</a>
+    </div>
+  </div>
+  <div>
+    <div class="photo-card"><img src="profile.jpg" alt="Raj Sharma"></div>
+    <div class="id-block">
+      <div class="name signature">Raj Sharma</div>
+      <div class="role">Entrepreneur | AI Ad Creative Freelancer</div>
+      <div class="loc">📍 India</div>
+    </div>
+  </div>
+</div>
+
+<section id="service" class="wrap reveal">
+  <div class="sec-title"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="1.2"></rect><rect x="13.5" y="3.5" width="7" height="7" rx="1.2"></rect><rect x="3.5" y="13.5" width="7" height="7" rx="1.2"></rect><rect x="13.5" y="13.5" width="7" height="7" rx="1.2"></rect></svg>What I Offer</div>
+  <div class="offer-list">
+    <div class="offer-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>Short-form video ad creatives</div>
+    <div class="offer-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a1 1 0 0 0 1 1h3l5 4V6L7 10H4a1 1 0 0 0-1 1z"></path><path d="M15 8a5 5 0 0 1 0 8"></path><path d="M18 5a9 9 0 0 1 0 14"></path></svg>Paid ad creatives (designed for Meta, YouTube &amp; more)</div>
+    <div class="offer-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.4"></circle><circle cx="6" cy="12" r="2.4"></circle><circle cx="18" cy="19" r="2.4"></circle><line x1="8.2" y1="10.9" x2="15.8" y2="6.1"></line><line x1="8.2" y1="13.1" x2="15.8" y2="17.9"></line></svg>Social media ad creatives (designed for Instagram &amp; more)</div>
+    <div class="offer-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12.3 12 20.8a1.6 1.6 0 0 1-2.3 0L3.2 14.3a1.6 1.6 0 0 1 0-2.3L11.7 3.5a1.6 1.6 0 0 1 1.1-.5H19a1.5 1.5 0 0 1 1.5 1.5v6.3a1.6 1.6 0 0 1-.5 1.1z"></path><circle cx="16.2" cy="7.8" r="1.4"></circle></svg>Product &amp; service promotional ads</div>
+    <div class="offer-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"></circle><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"></path></svg>AI-powered UGC-style ad creatives</div>
+    <div class="offer-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4h13A1.5 1.5 0 0 1 20 5.5v9A1.5 1.5 0 0 1 18.5 16H9l-4 4v-4H5.5A1.5 1.5 0 0 1 4 14.5z"></path></svg>Hooks, captions &amp; CTAs</div>
+    <div class="offer-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c1 3 2.5 4.5 5.5 5.5-3 1-4.5 2.5-5.5 5.5-1-3-2.5-4.5-5.5-5.5 3-1 4.5-2.5 5.5-5.5z"></path><path d="M18.5 15.5c.5 1.5 1.2 2.2 2.7 2.7-1.5.5-2.2 1.2-2.7 2.7-.5-1.5-1.2-2.2-2.7-2.7 1.5-.5 2.2-1.2 2.7-2.7z"></path></svg>Brand-focused creative concepts</div>
+  </div>
+</section>
+<section id="work" class="wrap reveal">
+  <div class="sec-title"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="15" rx="1.5"></rect><line x1="8" y1="4.5" x2="8" y2="19.5"></line><line x1="16" y1="4.5" x2="16" y2="19.5"></line><line x1="3" y1="9" x2="8" y2="9"></line><line x1="3" y1="15" x2="8" y2="15"></line><line x1="16" y1="9" x2="21" y2="9"></line><line x1="16" y1="15" x2="21" y2="15"></line></svg>Selected Work</div>
+  <div class="sec-sub">Spec concepts, built like real ads.</div>
+  <p class="sec-text">Original concepts created to demonstrate creative direction, storytelling and production quality.</p>
+  <div class="work-grid" id="workGrid">
+    <div class="work-card"><video class="work-card-media" controls preload="none" playsinline poster="media/realestate.jpg"><source src="media/realestate.mp4" type="video/mp4"></video><div class="work-card-overlay"><div class="top-group"><div class="idx">01</div><span class="tag">Real Estate</span></div><div class="text-panel"><div class="wname">Cavryne Estates</div><div class="spec">Spec Ad / Concept — Not a Client Project</div></div></div></div>
+    <div class="work-card"><video class="work-card-media" controls preload="none" playsinline poster="media/jewellery.jpg"><source src="media/jewellery.mp4" type="video/mp4"></video><div class="work-card-overlay"><div class="top-group"><div class="idx">02</div><span class="tag">Jewellery</span></div><div class="text-panel"><div class="wname">Zelvique Jewels</div><div class="spec">Spec Ad / Concept — Not a Client Project</div></div></div></div>
+    <div class="work-card"><video class="work-card-media" controls preload="none" playsinline poster="media/footwear.jpg"><source src="media/footwear.mp4" type="video/mp4"></video><div class="work-card-overlay"><div class="top-group"><div class="idx">03</div><span class="tag">Footwear Brands</span></div><div class="text-panel"><div class="wname">Trevaro</div><div class="spec">Spec Ad / Concept — Not a Client Project</div></div></div></div>
+    <div class="work-card"><video class="work-card-media" controls preload="none" playsinline poster="media/restaurants.jpg"><source src="media/restaurants.mp4" type="video/mp4"></video><div class="work-card-overlay"><div class="top-group"><div class="idx">04</div><span class="tag">Restaurants</span></div><div class="text-panel"><div class="wname">Savorique</div><div class="spec">Spec Ad / Concept — Not a Client Project</div></div></div></div>
+    <div class="work-card"><video class="work-card-media" controls preload="none" playsinline poster="media/cafes.jpg"><source src="media/cafes.mp4" type="video/mp4"></video><div class="work-card-overlay"><div class="top-group"><div class="idx">05</div><span class="tag">Cafés &amp; Coffee Shops</span></div><div class="text-panel"><div class="wname">Mioré Coffee</div><div class="spec">Spec Ad / Concept — Not a Client Project</div></div></div></div>
+    <div class="work-card"><video class="work-card-media" controls preload="none" playsinline poster="media/skincare.jpg"><source src="media/skincare.mp4" type="video/mp4"></video><div class="work-card-overlay"><div class="top-group"><div class="idx">06</div><span class="tag">Skincare &amp; Beauty</span></div><div class="text-panel"><div class="wname">Avenique Skin</div><div class="spec">Spec Ad / Concept — Not a Client Project</div></div></div></div>
+    <div class="work-card"><video class="work-card-media" controls preload="none" playsinline poster="media/electronics.jpg"><source src="media/electronics.mp4" type="video/mp4"></video><div class="work-card-overlay"><div class="top-group"><div class="idx">07</div><span class="tag">Electronics / Retail</span></div><div class="text-panel"><div class="wname">Vantrexa Electronics</div><div class="spec">Spec Ad / Concept — Not a Client Project</div></div></div></div>
+    <div class="work-card"><video class="work-card-media" controls preload="none" playsinline poster="media/clothing.jpg"><source src="media/clothing.mp4" type="video/mp4"></video><div class="work-card-overlay"><div class="top-group"><div class="idx">08</div><span class="tag">Clothing Brands</span></div><div class="text-panel"><div class="wname">Alverique Studio</div><div class="spec">Spec Ad / Concept — Not a Client Project</div></div></div></div>
+    <div class="work-card"><video class="work-card-media" controls preload="none" playsinline poster="media/perfume.jpg"><source src="media/perfume.mp4" type="video/mp4"></video><div class="work-card-overlay"><div class="top-group"><div class="idx">09</div><span class="tag">Perfume Brands</span></div><div class="text-panel"><div class="wname">Elarique Parfums</div><div class="spec">Spec Ad / Concept — Not a Client Project</div></div></div></div>
+    <div class="work-card"><video class="work-card-media" controls preload="none" playsinline poster="media/snacks.jpg"><source src="media/snacks.mp4" type="video/mp4"></video><div class="work-card-overlay"><div class="top-group"><div class="idx">10</div><span class="tag">Snack Brands</span></div><div class="text-panel"><div class="wname">Croyelle</div><div class="spec">Spec Ad / Concept — Not a Client Project</div></div></div></div>
+    <div class="work-card"><video class="work-card-media" controls preload="none" playsinline poster="media/sports.jpg"><source src="media/sports.mp4" type="video/mp4"></video><div class="work-card-overlay"><div class="top-group"><div class="idx">11</div><span class="tag">Sports Nutrition</span></div><div class="text-panel"><div class="wname">Forvexa</div><div class="spec">Spec Ad / Concept — Not a Client Project</div></div></div></div>
+    <div class="work-card"><video class="work-card-media" controls preload="none" playsinline poster="media/hotels.jpg"><source src="media/hotels.mp4" type="video/mp4"></video><div class="work-card-overlay"><div class="top-group"><div class="idx">12</div><span class="tag">Hotels</span></div><div class="text-panel"><div class="wname">Marovique Grand</div><div class="spec">Spec Ad / Concept — Not a Client Project</div></div></div></div>
+  </div>
+</section>
+
+<section id="industries" class="wrap reveal">
+  <div class="sec-title"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="1"></rect><line x1="9" y1="7" x2="9" y2="7.01"></line><line x1="15" y1="7" x2="15" y2="7.01"></line><line x1="9" y1="11" x2="9" y2="11.01"></line><line x1="15" y1="11" x2="15" y2="11.01"></line><line x1="9" y1="15" x2="9" y2="15.01"></line><line x1="15" y1="15" x2="15" y2="15.01"></line><line x1="10" y1="21" x2="10" y2="17.5"></line><line x1="14" y1="21" x2="14" y2="17.5"></line></svg>Industries We Serve</div>
+  <div class="pills" id="industryPills">
+    <span class="pill"><span class="idx">01</span>Real Estate</span>
+    <span class="pill"><span class="idx">02</span>Jewellery</span>
+    <span class="pill"><span class="idx">03</span>Footwear Brands</span>
+    <span class="pill"><span class="idx">04</span>Restaurants</span>
+    <span class="pill"><span class="idx">05</span>Cafés &amp; Coffee Shops</span>
+    <span class="pill"><span class="idx">06</span>Skincare &amp; Beauty</span>
+    <span class="pill"><span class="idx">07</span>Electronics / Retail</span>
+    <span class="pill"><span class="idx">08</span>Clothing Brands</span>
+    <span class="pill"><span class="idx">09</span>Perfume Brands</span>
+    <span class="pill"><span class="idx">10</span>Snack Brands</span>
+    <span class="pill"><span class="idx">11</span>Sports Nutrition</span>
+    <span class="pill"><span class="idx">12</span>Hotels</span>
+    <span class="pill pill-open"><span class="idx">+</span>Other Industries — On Request</span>
+  </div>
+  <div class="industries-note">Don't see your industry listed? I take on projects across any niche — reach out and let's discuss your brand.</div>
+</section>
+
+
+<section id="process" class="wrap reveal">
+  <div class="sec-title"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"></circle><path d="M19.4 13.5a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V19.5a2 2 0 1 1-4 0v-.09a1.7 1.7 0 0 0-1-1.56 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.7 1.7 0 0 0 .34-1.87 1.7 1.7 0 0 0-1.55-1H4.5a2 2 0 1 1 0-4h.09a1.7 1.7 0 0 0 1.56-1 1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.7 1.7 0 0 0 1.87.34H10a1.7 1.7 0 0 0 1-1.55V4.5a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1 1.56 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87V10c.14.6.5 1.13 1.55 1H19.5a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.56 1z"></path></svg>How It Works</div>
+  <div class="create-list">
+    <div class="create-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4h13A1.5 1.5 0 0 1 20 5.5v9A1.5 1.5 0 0 1 18.5 16H9l-4 4v-4H5.5A1.5 1.5 0 0 1 4 14.5z"></path></svg>Discuss your brand &amp; requirement</div>
+    <div class="create-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4l10.5-10.5a2 2 0 0 0 0-2.8l-1.2-1.2a2 2 0 0 0-2.8 0L4 16v4z"></path><line x1="13.5" y1="6" x2="18" y2="10.5"></line></svg>Concept, hook &amp; script planning</div>
+    <div class="create-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="1.2"></rect><rect x="10" y="10" width="4" height="4"></rect><line x1="12" y1="2.5" x2="12" y2="6"></line><line x1="12" y1="18" x2="12" y2="21.5"></line><line x1="2.5" y1="12" x2="6" y2="12"></line><line x1="18" y1="12" x2="21.5" y2="12"></line></svg>AI-powered creative production</div>
+    <div class="create-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="2.5"></rect><polyline points="8 12.5 11 15.5 16.5 9"></polyline></svg>Delivery, review &amp; revisions</div>
+  </div>
+</section>
+
+<section id="package" class="wrap reveal">
+  <div class="sec-title"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5z"></path><polyline points="3 8 12 13 21 8"></polyline><line x1="12" y1="13" x2="12" y2="21"></line></svg>Monthly Packages</div>
+  <div class="pkg-grid">
+    <div class="pkg-card">
+      <div class="pkg-tier"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold2)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 4 14 11 14 10 22 20 9 13 9 13 2"></polygon></svg>Starter</div>
+      <div class="pkg-price">₹10,000<span style="font-size:14px;color:var(--muted);font-weight:500">/mo</span></div>
+      <div class="pkg-ads">5 Premium AI Ad Creatives</div>
+      <div class="pkg-sub">
+        <div>20–30 sec · 9:16 · 1080×1920</div>
+        <div>Background Music included</div>
+        <div>No revisions included</div>
+      </div>
+    </div>
+    <div class="pkg-card featured">
+      <div class="pkg-badge">Best Value</div>
+      <div class="pkg-tier"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold2)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 6"></polyline><polyline points="15 6 21 6 21 12"></polyline></svg>Growth</div>
+      <div class="pkg-price">₹20,000<span style="font-size:14px;color:var(--muted);font-weight:500">/mo</span></div>
+      <div class="pkg-ads">10 Premium AI Ad Creatives</div>
+      <div class="pkg-sub">
+        <div>20–30 sec · 9:16 · 1080×1920</div>
+        <div>Hook Strategy + Background Music included</div>
+        <div>1 revision included (Package-wide)</div>
+        <div style="color:var(--gold2);font-weight:600;display:flex;align-items:center;gap:6px"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold2)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px;flex-shrink:0"><rect x="3" y="8" width="18" height="13" rx="1"></rect><rect x="3" y="8" width="18" height="4"></rect><line x1="12" y1="8" x2="12" y2="21"></line><path d="M12 8c-1.5-3-5-4-5-1.5C7 8 9 8 12 8z"></path><path d="M12 8c1.5-3 5-4 5-1.5C17 8 15 8 12 8z"></path></svg>+1 Free Bonus Ad Creative</div>
+      </div>
+    </div>
+    <div class="pkg-card">
+      <div class="pkg-tier"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold2)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c3 1.5 5 4.5 5 8.5 0 2-1 4-2 5l-3 3-3-3c-1-1-2-3-2-5 0-4 2-7 5-8.5z"/><circle cx="12" cy="10" r="1.6"/><path d="M8.5 14.5 6 17l1-3.5"/><path d="M15.5 14.5 18 17l-1-3.5"/></svg>Pro</div>
+      <div class="pkg-price">₹30,000<span style="font-size:14px;color:var(--muted);font-weight:500">/mo</span></div>
+      <div class="pkg-ads">15 Premium AI Ad Creatives</div>
+      <div class="pkg-sub">
+        <div>20–30 sec · 9:16 · 1080×1920</div>
+        <div>Hook Strategy + AI Voiceover + Background Music included</div>
+        <div>2 revisions included (Package-wide)</div>
+        <div style="color:var(--gold2);font-weight:600;display:flex;align-items:center;gap:6px"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold2)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px;flex-shrink:0"><rect x="3" y="8" width="18" height="13" rx="1"></rect><rect x="3" y="8" width="18" height="4"></rect><line x1="12" y1="8" x2="12" y2="21"></line><path d="M12 8c-1.5-3-5-4-5-1.5C7 8 9 8 12 8z"></path><path d="M12 8c1.5-3 5-4 5-1.5C17 8 15 8 12 8z"></path></svg>+1 Free Bonus Ad Creative</div>
+      </div>
+    </div>
+  </div>
+  <div class="pkg-note rotating-border"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold2)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;vertical-align:-3px;margin-right:6px"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.8 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.8-3.8-9s1.3-6.5 3.8-9z"/></svg><span style="color:var(--ink)">International clients:</span> Same packages &amp; features above — pricing available on request.</div>
+</section>
+
+<section id="about" class="wrap reveal">
+  <div class="sec-title"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.7"></circle><path d="M4.5 20.2a7.5 7.5 0 0 1 15 0"></path></svg>About Me</div>
+  <p class="about-text">I'm Raj Sharma, an entrepreneur on a journey to build and grow my own brands from scratch. Alongside my entrepreneurial journey, I work as a freelance AI Ad Creative Specialist, creating short-form video ad creatives that turn products and services into engaging visual stories for social media, paid ads, and brand promotion.</p>
+  <p class="about-text">I combine creative thinking with AI-powered production to help businesses showcase their products and services through modern, professional, and attention-grabbing video ad creatives.</p>
+  <div class="whyme-title" id="whyme"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c1 3 2.5 4.5 5.5 5.5-3 1-4.5 2.5-5.5 5.5-1-3-2.5-4.5-5.5-5.5 3-1 4.5-2.5 5.5-5.5z"></path><path d="M18.5 15.5c.5 1.5 1.2 2.2 2.7 2.7-1.5.5-2.2 1.2-2.7 2.7-.5-1.5-1.2-2.2-2.7-2.7 1.5-.5 2.2-1.2 2.7-2.7z"></path></svg>Why Work With Me</div>
+  <div class="whyme">
+    <div class="whyme-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12.5 6 9l3.5 3-2 2 3 3 2-2 1.5 1.5"></path><path d="M22 12.5 18 9l-3.5 3"></path><path d="M9.5 12l3 3 3-3 3.5 3-2.5 2.5a2 2 0 0 1-2.8 0l-.2-.2-.2.2a2 2 0 0 1-2.8 0L8 15"></path></svg>Direct 1:1 collaboration — no agency layers</div>
+    <div class="whyme-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c1 3 2.5 4.5 5.5 5.5-3 1-4.5 2.5-5.5 5.5-1-3-2.5-4.5-5.5-5.5 3-1 4.5-2.5 5.5-5.5z"></path><path d="M18.5 15.5c.5 1.5 1.2 2.2 2.7 2.7-1.5.5-2.2 1.2-2.7 2.7-.5-1.5-1.2-2.2-2.7-2.7 1.5-.5 2.2-1.2 2.7-2.7z"></path></svg>Original, AI-crafted creative concepts — not templates</div>
+    <div class="whyme-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 4 14 11 14 10 22 20 9 13 9 13 2"></polygon></svg>Fast turnaround, built around your brand</div>
+  </div>
+</section>
+
+<section id="contact" class="wrap reveal">
+  <div class="contact-hook"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold2)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c1 3 2.5 4.5 5.5 5.5-3 1-4.5 2.5-5.5 5.5-1-3-2.5-4.5-5.5-5.5 3-1 4.5-2.5 5.5-5.5z"/><path d="M18.5 15.5c.5 1.5 1.2 2.2 2.7 2.7-1.5.5-2.2 1.2-2.7 2.7-.5-1.5-1.2-2.2-2.7-2.7 1.5-.5 2.2-1.2 2.7-2.7z"/></svg>Let's build something exceptional.</div>
+  <div class="contact-subhook">Have a project in mind or want to discuss how AI can elevate your next ad creative?</div>
+  <div class="sec-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 13l1.5-1.5a2 2 0 0 1 2.83 0l.34.34a1 1 0 0 0 1.42 0l1.6-1.6a1.5 1.5 0 0 0 0-2.12L15.5 5A3 3 0 0 0 11 5L5 11a2 2 0 0 0 0 2.83L9.17 18a2 2 0 0 0 2.83 0l.5-.5"/><path d="M8 15l2 2"/><path d="M2 12l4-4 2 2"/><path d="M22 10l-4 4-2-2"/></svg>Get in Touch<span class="spacer" aria-hidden="true"></span></div>
+  <div class="contact-row">
+    <a class="contact-card rotating-border" href="https://wa.me/918936016634" target="_blank" rel="noopener">
+      <span class="icon-badge badge-whatsapp"><svg viewBox="0 0 32 32" fill="#25D366"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.3.6 4.4 1.7 6.3L4 29l7.9-1.6c1.8 1 3.9 1.5 6.1 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-2 0-3.9-.5-5.5-1.5l-.4-.2-4.6.9 1-4.5-.3-.4C5.1 17.5 4.6 16.3 4.6 15c0-6.3 5.1-11.4 11.4-11.4S27.4 8.7 27.4 15 22.3 24.8 16 24.8zm6.3-8.5c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1.1-1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7.1-.1.3-.4.5-.5.2-.2.2-.3.3-.5.1-.2.1-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.9 1.2 3.1c.2.2 2.2 3.4 5.4 4.7.8.3 1.4.5 1.8.6.8.3 1.5.2 2 .1.6-.1 2-.8 2.3-1.6.3-.8.3-1.4.2-1.6-.1-.1-.3-.2-.6-.4z"/></svg></span>
+      <span class="label">Chat on WhatsApp</span>
+      <span class="spacer" aria-hidden="true"></span>
+    </a>
+    <a class="contact-card rotating-border" href="mailto:officialrajsharma.one@gmail.com">
+      <span class="icon-badge badge-email"><svg viewBox="0 0 24 24" fill="none" stroke="#f0c97a" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6"/></svg></span>
+      <span class="label">Email Me</span>
+      <span class="spacer" aria-hidden="true"></span>
+    </a>
+    <a class="contact-card rotating-border" href="https://www.linkedin.com/in/raj-sharma-081aa143a" target="_blank" rel="noopener">
+      <span class="icon-badge badge-linkedin"><svg viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.59 0 4.25 2.36 4.25 5.44v6.3zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></span>
+      <span class="label">LinkedIn</span>
+      <span class="spacer" aria-hidden="true"></span>
+    </a>
+    <a class="contact-card rotating-border" href="https://x.com/rajsharma_07" target="_blank" rel="noopener" aria-label="X profile">
+      <span class="icon-badge badge-x"><svg viewBox="0 0 24 24" fill="var(--ink)"><path d="M18.9 3H22l-7.6 8.7L23 21h-6.6l-5.2-6.3L5.2 21H2.1l8.2-9.4L1.5 3h6.8l4.7 5.7L18.9 3zm-1.2 16.2h1.8L7.4 4.7H5.5l12.2 14.5z"/></svg></span>
+      <span class="label">X</span>
+      <span class="spacer" aria-hidden="true"></span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  © 2026 <span class="gold">Raj Sharma</span>. All rights reserved.<br>
+  AI Ad Creative Freelancer · India
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg></button>
+<script>
+const toggle=document.getElementById("navtoggle"), links=document.getElementById("navlinks");
+toggle.addEventListener("click",()=>links.classList.toggle("open"));
+links.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>links.classList.remove("open")));
+
+const backToTop=document.getElementById("backToTop");
+window.addEventListener("scroll",()=>{
+  if(window.scrollY>400){backToTop.classList.add("show");}
+  else{backToTop.classList.remove("show");}
+});
+backToTop.addEventListener("click",()=>{window.scrollTo({top:0,behavior:"smooth"});});
+</script>
+</body>
+</html>
